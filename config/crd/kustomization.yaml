@@ -1,0 +1,12 @@
+# This file will be populated by controller-gen when CRDs are generated.
+# Run `make manifests` after dependencies are available.
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+
+resources:
+  - bases/backup.example.com_backupstoragelocations.yaml
+  - bases/backup.example.com_backups.yaml
+  - bases/backup.example.com_clusterbackups.yaml
+  - bases/backup.example.com_restores.yaml
+  - bases/backup.example.com_clusterrestores.yaml
+  - bases/backup.example.com_remoteclusters.yaml

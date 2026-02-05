@@ -1,0 +1,25 @@
+domain: example.com
+layout: go.kubebuilder.io/v4
+projectName: backup-operator
+repo: example.com/backup-operator
+version: "3"
+multigroup: false
+resources:
+  - group: backup
+    kind: Backup
+    version: v1alpha1
+  - group: backup
+    kind: ClusterBackup
+    version: v1alpha1
+  - group: backup
+    kind: BackupStorageLocation
+    version: v1alpha1
+  - group: backup
+    kind: Restore
+    version: v1alpha1
+  - group: backup
+    kind: ClusterRestore
+    version: v1alpha1
+  - group: backup
+    kind: RemoteCluster
+    version: v1alpha1

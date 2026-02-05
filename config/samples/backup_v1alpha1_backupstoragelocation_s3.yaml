@@ -1,0 +1,16 @@
+apiVersion: backup.example.com/v1alpha1
+kind: BackupStorageLocation
+metadata:
+  name: primary-s3
+spec:
+  type: s3
+  s3:
+    endpoint: https://s3.example.com
+    bucket: backups
+    prefix: demo
+    region: us-east-1
+    forcePathStyle: false
+    secretRef:
+      name: s3-creds
+      namespace: backup-operator-system
+  default: true

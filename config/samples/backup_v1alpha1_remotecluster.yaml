@@ -1,0 +1,12 @@
+apiVersion: backup.example.com/v1alpha1
+kind: RemoteCluster
+metadata:
+  name: peer-cluster
+spec:
+  clusterID: cluster-b
+  apiServer: https://api.cluster-b.example.com:6443
+  auth:
+    method: ServiceAccountToken
+    secretRef:
+      name: remote-cluster-auth
+      namespace: backup-operator-system

@@ -1,0 +1,10 @@
+apiVersion: backup.example.com/v1alpha1
+kind: Restore
+metadata:
+  name: app1-restore
+  namespace: app1
+spec:
+  sourceRef:
+    kind: Backup
+    name: app1-backup
+    namespace: app1

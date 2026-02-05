@@ -1,0 +1,17 @@
+apiVersion: backup.example.com/v1alpha1
+kind: ClusterBackup
+metadata:
+  name: full-backup
+spec:
+  storageRef:
+    name: primary-s3
+  includeClusterResources: true
+  namespaces:
+    included:
+      - app1
+      - app2
+  export:
+    enabled: true
+  snapshot:
+    enabled: true
+    includeAllPVCs: true

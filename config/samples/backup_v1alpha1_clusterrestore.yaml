@@ -1,0 +1,8 @@
+apiVersion: backup.example.com/v1alpha1
+kind: ClusterRestore
+metadata:
+  name: full-restore
+spec:
+  sourceRef:
+    kind: ClusterBackup
+    name: full-backup

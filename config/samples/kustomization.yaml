@@ -1,0 +1,10 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+resources:
+  - backup_v1alpha1_backupstoragelocation_s3.yaml
+  - backup_v1alpha1_backupstoragelocation_nfs.yaml
+  - backup_v1alpha1_backup.yaml
+  - backup_v1alpha1_clusterbackup.yaml
+  - backup_v1alpha1_restore.yaml
+  - backup_v1alpha1_clusterrestore.yaml
+  - backup_v1alpha1_remotecluster.yaml

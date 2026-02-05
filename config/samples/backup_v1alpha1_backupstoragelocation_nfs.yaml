@@ -1,0 +1,10 @@
+apiVersion: backup.example.com/v1alpha1
+kind: BackupStorageLocation
+metadata:
+  name: primary-nfs
+spec:
+  type: nfs
+  nfs:
+    server: 10.0.0.10
+    path: /exports/backups
+  default: false

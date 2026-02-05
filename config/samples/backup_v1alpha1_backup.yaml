@@ -1,0 +1,14 @@
+apiVersion: backup.example.com/v1alpha1
+kind: Backup
+metadata:
+  name: app1-backup
+  namespace: app1
+spec:
+  storageRef:
+    name: primary-s3
+  export:
+    enabled: true
+    format: yaml
+  snapshot:
+    enabled: true
+    includeAllPVCs: true
